@@ -31,4 +31,9 @@ app.get("/", (req, res) => {
   
 });
 
+app.get("/downloads",(req, res)=>{
+  res.type('pdf')
+  res.download("./uploads/report.pdf")
+})
+
 app.listen(3333);
